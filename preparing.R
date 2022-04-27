@@ -258,9 +258,12 @@ for (col in colnames(result_df)[6:12]){
   result_df2 <- cbind(result_df2, tmp)
 }
 
+result_df2 %>% std
+
 mean_order <- sapply(result_df2, order) %>% rowMeans
 result_df2 <- cbind(result_df2, mean_order)
 write.csv(result_df2, "result2.csv")
+
 
 
 result_df2 <- result_df2 %>%
